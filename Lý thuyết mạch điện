@@ -1,0 +1,546 @@
+CHƯƠNG 15: ĐIỆN ÁP VÀ DÒNG ĐIỆN XOAY CHIỀU
+1. Kiến thức nền tảng cần hiểu trước
+
+AC – Alternating Current
+Dòng điện xoay chiều. Độ lớn và chiều dòng điện thay đổi theo thời gian. Ví dụ: điện lưới gia đình.
+
+DC – Direct Current
+Dòng điện một chiều. Dòng điện duy trì một chiều quy ước, ví dụ nguồn pin DC lý tưởng.
+
+Sine wave – Sóng hình sin
+Dạng sóng AC phổ biến nhất. Điện áp tăng từ 0 lên cực đại, giảm về 0, xuống cực tiểu rồi trở về 0.
+
+
+
+2. Dịch và phân tích theo từng mục trong tài liệu
+15-1. Ứng dụng của dòng điện xoay chiều
+Bản dịch nội dung:
+- Máy biến áp (변압기, Transformer) dùng để tăng hoặc giảm điện áp, hoạt động dựa trên nguyên lý cảm ứng điện từ và cần từ thông biến thiên.
+- Trong mạch AC, dòng điện thay đổi làm từ trường biến thiên, từ đó có thể tạo ra điện áp cảm ứng trong cuộn dây.
+- Điện dung (Capacitance) liên quan đến điện trường và sự thay đổi của điện áp.
+- Tác dụng của điện cảm L và điện dung C phụ thuộc vào tần số của nguồn AC.
+- Mạch cộng hưởng (공진회로, Resonant circuit) sử dụng L và C để chọn hoặc cộng hưởng tại một tần số nhất định.
+Giải thích dễ hiểu: Máy biến áp có thể tăng hoặc giảm điện áp AC nhờ từ trường biến thiên. Đây là một trong những lý do AC rất hữu ích trong truyền tải và phân phối điện.
+
+15-2. Sự tạo ra điện áp xoay chiều
+Khi một khung dây dẫn quay trong từ trường, điện áp xoay chiều được cảm ứng ở hai đầu khung dây.
+- Khung dây ở vị trí mà không cắt các đường sức từ theo cách tạo ra suất điện động: điện áp cảm ứng bằng 0.
+- Khi khung dây quay đến vị trí cắt từ thông mạnh nhất: điện áp cảm ứng đạt cực đại.
+- Khi khung dây tiếp tục quay, cực tính điện áp đổi theo từng nửa vòng quay.
+Một vòng quay hoàn chỉnh tương ứng với một chu kỳ điện.
+- Cycle (사이클): một chu kỳ hoàn chỉnh, tương ứng \(360^\circ\).
+- Alternation (교번): một nửa chu kỳ, tương ứng \(180^\circ\).
+- Frequency (주파수): tần số, đơn vị hertz (Hz).
+Góc độ và radian
+ Góc	        Radian
+0 độ     -      0
+90 độ    -     pi / 2
+180 độ   -      pi
+270 độ   -     3pi / 2
+360 độ   -     2pi
+
+Công thức đổi đơn vị:
+180 độ = pi (rad)
+
+Ví dụ: \(90^\circ=\pi/2\text{ rad}\).
+15-3. Sóng hình sin (정현파)
+Điện áp hình sin được tạo ra do chuyển động quay của máy phát điện. Giá trị điện áp cảm ứng tỷ lệ với sin của góc quay.
+Công thức quan trọng nhất:
+   v = V(m) x sin (anpha) 
+
+Trong đó:
+- v: điện áp tức thời (순시값).
+- V(m): điện áp cực đại (최대값, Peak voltage).
+- anpha: góc quay tại thời điểm đang xét.
+- sin(anpha): giá trị sin của góc đó.
+Ví dụ tính điện áp tức thời
+Cho \(V_M=100V\), tại góc \(\theta=30^\circ\):
+\[
+v=100\sin30^\circ=50V
+\]
+
+Tại \(90^\circ\), điện áp đạt \(100V\). Tại \(180^\circ\), điện áp trở về \(0V\).
+
+Các đặc điểm cần nhớ:
+- Một chu kỳ bằng 360 độ
+- Mỗi nửa chu kì sẽ đảo chiều
+- Tại 90 độ: đạt cực đại dương.
+- Tại 270 độ: đạt cực đại âm.
+- Tại 0 độ và 180 dộ : điện áp bằng 0.
+- Điện áp thay đổi nhanh nhất khi đi qua trục 0; thay đổi chậm nhất gần điểm cực đại và cực tiểu.
+
+15-4. Dòng điện xoay chiều (교류전류)
+Khi đặt điện áp AC hình sin vào hai đầu điện trở, dòng điện chạy qua điện trở cũng có dạng hình sin.
+Trong mạch chỉ có điện trở lý tưởng:
+- Điện áp và dòng điện cùng pha.
+- Tần số dòng điện bằng tần số điện áp nguồn.
+- Dòng điện đổi chiều sau mỗi nửa chu kỳ.
+- Cả nửa chu kỳ dương và nửa chu kỳ âm đều tiêu thụ công suất trên điện trở.
+
+Điểm dễ nhầm: Điện áp v đo bằng volt (V), dòng điện i đo bằng ampere (A). Không so sánh trực tiếp độ lớn số học của hai đại lượng này, nhưng có thể so sánh hình dạng và thời điểm biến thiên.
+
+15-5. Các giá trị điện áp và dòng điện hình sin
+Đây là phần rất quan trọng khi làm bài tập tính toán.
+1. Peak value – Giá trị đỉnh ( 피크값 : Giá trị max )
+Giá trị lớn nhất của điện áp hoặc dòng điện, ký hiệu V(m) hoặc I(m).
+
+
+2. Peak-to-peak value – Giá trị đỉnh-đỉnh (피크-대-피크값 : Giá trị từ đỉnh max đến min )
+Khoảng cách từ đỉnh dương đến đỉnh âm:
+   V(pp) = 2 x V(m)
+
+3. Average value – Giá trị trung bình ( 평균값 )
+Với sóng sin đối xứng, giá trị trung bình trong một nửa chu kỳ bằng:
+    V(avg) = 0.637 x V(m)
+
+Giá trị trung bình trên toàn bộ chu kỳ bằng 0 vì phần dương và phần âm triệt tiêu nhau.
+
+
+4. RMS value – Giá trị hiệu dụng ( 실호값 )
+Giá trị DC tương đương về khả năng tạo nhiệt trên điện trở:
+
+    V(rms) = 0.707 x V(m)
+    I(rms) = 0.707 x I(m)
+
+
+Các công thức chuyển đổi trong tài liệu:
+
+       V(avg) = 0.637 x V(m)
+
+       V(rms) = 0.707 x v(m)
+
+       V(m) = 1,.414 x V(rms)
+
+       V(pp) = 2.828 x V(rms)
+
+
+Các hệ số này áp dụng cho sóng hình sin; không áp dụng mặc định cho mọi dạng sóng AC.
+Ví dụ: Điện áp nguồn có giá trị hiệu dụng 120V ( V(rms) = 120V).
+          V(m) = 1.414 x V(rms) = 120 x 1.414 ~ 169.7 (V)
+          V(pp) = 2.828 x V(rms) = 2.828 x 120 ~ 339.4 (V)
+Vì vậy, điện áp AC ghi 120V RMS có đỉnh khoảng 170V, không phải đỉnh chỉ 120V.
+15-6. Tần số (주파수) ; 사이큰 : Chu kì
+Tần số là số chu kỳ hoàn chỉnh diễn ra trong một giây.
+    f = số chu kì / thời gian (s)
+   
+Đơn vị: Hz (hertz).
+- 1Hz: một chu kỳ mỗi giây.
+- 60Hz: 60 chu kỳ mỗi giây.
+- Tần số càng cao thì sóng dao động càng nhanh.
+Tài liệu cũng phân biệt:
+- Audio frequency(가청주파수): tần số âm thanh nghe được; tài liệu nêu khoảng 16–16.000 Hz.
+- Radio frequency (무선주파수): tần số vô tuyến.
++) Dải tần số âm thanh mà tai người nghe được vào khoảng 16 ~ 16.000 Hz.
++)Dải tần số vô tuyến kéo dài đến 300.000 MHz (300 GHz).
++)Tần số của âm thanh càng cao thì cao độ (pitch) của âm càng cao.
++)Biên độ (Amplitude)(진폭) không liên quan đến tần số của âm thanh mà ảnh hưởng đến cường độ (độ to) của âm thanh.
+
+- Sound wave: sóng âm là sự biến thiên áp suất do dao động cơ học.
++)Tần số của sóng âm nằm trong dải nghe được (16–16.000 Hz) được gọi là tần số âm thanh (sound frequency)(음향주파수).
+
+- Ultrasonic wave: sóng siêu âm, có tần số vượt quá giới hạn nghe được.(초음파)
+Tài liệu đưa ra khoảng tần số nghe được theo cách đơn giản hóa; giới hạn nghe thực tế thay đổi tùy người và độ tuổi.
+15-7. Chu kỳ (주기)
+Chu kỳ T là thời gian để hoàn thành một chu kỳ sóng.
+  T = 1 / f
+
+  f = 1 / T
+
+
+
+Trong đó:
+- T: chu kỳ, đơn vị giây (s).
+- f: tần số, đơn vị Hz.
+Ví dụ với \(f=60Hz\):
+  T = 1 / 60 ~ 0.01667 ms
+
+Tức là khoảng \(16.67ms\).
+Mẹo nhớ: Tần số tăng thì chu kỳ giảm. Hai đại lượng tỷ lệ nghịch.
+
+15-8. Bước sóng (파장)
+Bước sóng λ là quãng đường sóng truyền được trong một chu kỳ.
+    C = v / f
+
+Trong đó:
+- λ: bước sóng, đơn vị m.
+- v: tốc độ truyền sóng, đơn vị m/s.
+- f: tần số, đơn vị Hz.
+Ví dụ: Sóng điện từ truyền trong chân không với tốc độ khoảng v =  3 x 10 ^ 8 m/s, có tần số f = 100MHz = 100 x 10 ^ 6 Hz :
+                 λ = v / f = 3 x 10 ^ 8 / 100 x 10 ^ 6 = 3 (m)
+
+Kết luận: Khi tốc độ truyền sóng không đổi, tần số càng cao thì bước sóng càng ngắn.
+
+15-9. Góc pha (위상각)
+Góc pha(위산각) biểu thị sự khác biệt về pha giữa hai sóng có cùng tần số.
+ 피크값이되는순간과0이되는순간이같은두파형은
+위상이같으며(in phase) 위상각은0°가된다.
+• 한사인파가피크에도달한순간에다른사인파는0이되면
+두파형은위상이어긋나며(out of phase) 위상각은90°가된다.
+• 한사인파가다른파형과정반대로움직이면두파형은
+180°만큼위상차가난다.
+
+
+Bản dịch : 
+
+-) Hai dạng sóng có thời điểm đạt đỉnh và thời điểm bằng 0 trùng nhau thì cùng pha (in phase), và góc pha là 0°.
+-) Khi một sóng sin đạt đỉnh mà sóng sin kia bằng 0, hai dạng sóng lệch pha (out of phase), và góc pha là 90°.
+-) Khi một sóng sin chuyển động hoàn toàn ngược chiều với sóng kia, hai dạng sóng lệch pha nhau 180° (ngược pha).
+
+Phasor (페이저, vectơ pha): biểu diễn độ lớn và pha của một đại lượng AC bằng một vectơ quay hoặc vectơ pha.
+- Chiều dài vectơ biểu thị biên độ theo quy ước biểu diễn.
+- Góc của vectơ biểu thị góc pha.
+- Phải chọn một sóng làm mốc tham chiếu để xác định sóng nào sớm pha hay trễ pha.
+
+15-10. Mối quan hệ giữa pha và thời gian
+Một chu kỳ tương ứng với 360 độ , nên có thể đổi góc lệch pha thành độ lệch thời gian.
+    t = (anpha) / 360 độ   x    1 / f
+
+Trong đó:
+- t: độ lệch thời gian (s).
+- anpha: góc lệch pha (độ).
+- f: tần số (Hz).
+Ví dụ: Hai sóng 60Hz lệch pha 90 độ .
+    t = (anpha) / 360   x   1 / f
+      =  90 / 360   x  1 / 60 ~ 4.167 (ms)
+
+Nghĩa là hai sóng lệch nhau một phần tư chu kỳ.
+15-11. Mạch xoay chiều có điện trở ( 저항이연결된교류회로(직렬) )
+Theo tài liệu, khi mạch chỉ có điện trở lý tưởng, ta áp dụng các định luật mạch điện như với DC, miễn là xét các giá trị tức thời hoặc các giá trị AC tương ứng đúng cách.
+
+Đại lượng	                            Mạch nối tiếp	                               Mạch song song
+Cách mắc	                      Nối đuôi nhau, một đường đi	                 Chung hai đầu, nhiều nhánh
+Dòng điện	                        I = I1 = I2 = ... = In	                      I = I1 + I2 + ... + In
+Điện áp	                          V = V1 + V2 + ... + Vn	                      V = V1 = V2 = ... = Vn
+Điện trở       	                  R = R1 + R2 + ... + Rn	                   1/R = 1/R1 + 1/R2 + ... + 1/Rn
+Hai điện trở	                         R = R1 + R2	                            R = (R1 x R2) / (R1 + R2)
+Điện áp / dòng trên từng phần tử	     Vn = I x Rn	                                   In = V / Rn
+So sánh R tương đương	            Lớn hơn mọi điện trở thành phần	               Nhỏ hơn điện trở nhỏ nhất
+
+
+A. Mạch nối tiếp (직렬회로)
+- Dòng điện qua tất cả điện trở mắc nối tiếp là như nhau.
+- Điện áp rơi trên mỗi điện trở được tính bằng định luật Ohm:
+    V = I x R
+
+- Tổng các điện áp rơi bằng điện áp nguồn.
+Ví dụ: Nguồn \(120V\), hai điện trở 10 Ohm và 20 Ohm mắc nối tiếp.
+      R(t) = R1 + R2 = 10 + 20 = 30 (Ohm)
+      I(t) = V / R(t) = 120 / 30 = 4 (A)
+
+
+
+Điện áp trên từng điện trở:
+  V(1) = 4 x 10 = 40 (V)
+  V(2) = 4 x 20 = 80 (V)
+
+
+B. Mạch song song (병렬회로)
+- Điện áp hai đầu mỗi nhánh bằng điện áp nguồn.
+- Dòng điện mỗi nhánh được tính bằng I = V / R.
+- Tổng dòng điện bằng tổng dòng các nhánh.
+Ví dụ: Hai điện trở 20 Ohm và 10 Ohm mắc song song vào nguồn 120 V.
+   I(1) = 120 / 20 = 6(A)
+   I(2) = 120 / 10 = 12 (A)
+
+   I(t0 = 6 + 12 = 18 (A)
+
+C. Mạch hỗn hợp nối tiếp – song song
+Phải rút gọn phần song song trước, sau đó tính tổng điện trở và dòng điện toàn mạch.
+Các công thức cần nhớ:
+ R(nt) = R(1) + R(2)
+
+ 1/ R(ss) = 1 / R(1) + 1/ R(2)
+
+ I(t) = V / R(t)
+
+15-12. Các dạng sóng AC không phải hình sin
+Tài liệu giới thiệu ba dạng sóng phổ biến:
+
+
+Square wave – Sóng vuông
+Thường dùng trong mạch số và các mạch chuyển trạng thái giữa hai mức điện áp.
+
+
+Sawtooth wave – Sóng răng cưa
+Điện áp tăng hoặc giảm dần rồi trở về nhanh, thường dùng trong mạch định thời và điều khiển.
+
+
+Pulse wave – Sóng xung
+Các xung điện áp xuất hiện trong những khoảng thời gian nhất định, được dùng trong mạch số và điều khiển.
+
+Điểm giống nhau giữa sóng hình sin và các sóng khác:
+- Đều có thể có chu kỳ, giá trị đỉnh và giá trị đỉnh-đỉnh.
+- Phần trên trục 0 là giá trị dương; phần dưới trục 0 là giá trị âm.
+- Có thể là các dạng sóng AC.
+Điểm khác nhau cần nhớ:
+- Công thức V(rms) = 0.707 x V(m) chỉ áp dụng trực tiếp cho sóng hình sin.
+- Góc pha (위상각) như cách trình bày trong phần này được áp dụng cho sóng hình sin.
+- Với sóng không đối xứng quanh trục 0, giá trị đỉnh-đỉnh có thể hữu ích hơn khi mô tả biên độ.
+15-13. Tần số hài (고조파 주파수)
+Tần số hài là các bội số nguyên của tần số cơ bản.
+\[
+f_n=nf_1
+\]
+
+Trong đó:
+- \(f_1\): tần số cơ bản.
+- \(n\): số nguyên dương.
+- \(f_n\): tần số hài bậc \(n\).
+Ví dụ: Tần số cơ bản là \(100Hz\).
+Bậc hài	Tần số
+Cơ bản (bậc 1)	100 Hz
+Bậc 2	200 Hz
+Bậc 3	300 Hz
+Bậc 4	400 Hz
+Bậc 5	500 Hz
+Tần số hài hữu ích khi phân tích sóng hình sin bị méo và các dạng sóng không hình sin.
+Hai thuật ngữ trong tài liệu:
+- Octave (옥타브): khoảng tần số mà tỷ số giữa hai tần số là \(2:1\).
+- Decade (데케이드): khoảng tần số mà tỷ số là \(10:1\).
+Ví dụ, từ \(200Hz\) đến \(400Hz\) là một octave; từ \(30kHz\) đến \(300kHz\) là một decade.
+15-14. Đường điện AC 60 Hz
+Phần này giải thích hệ thống điện dân dụng của Mỹ, không phải thông số điện lưới Hàn Quốc.
+Theo tài liệu:
+- Điện áp dân dụng Mỹ thường khoảng \(115–125V\) RMS, tần số \(60Hz\).
+- Các ổ cắm và thiết bị trong nhà được nối song song với đường dây cấp điện.
+- Điện AC được sử dụng để truyền tải điện hiệu quả hơn trong hệ thống điện nhờ khả năng biến đổi điện áp bằng máy biến áp.
+Tại sao truyền tải điện ở điện áp cao lại giảm tổn thất?
+Công suất điện:
+\[
+P=VI
+\]
+
+Với cùng công suất \(P\), nếu tăng điện áp \(V\), dòng điện \(I\) cần thiết sẽ giảm.
+Tổn thất công suất trên đường dây có điện trở \(R\):
+\[
+\boxed{P_{\text{loss}}=I^2R}
+\]
+
+Vì tổn thất tỷ lệ với bình phương dòng điện, giảm dòng điện sẽ giảm tổn thất đáng kể.
+Tài liệu cũng đề cập đến:
+- Grounding – Tiếp địa: kết nối hệ thống với đất nhằm tăng độ an toàn và hỗ trợ bảo vệ hệ thống.
+- GFCI – Ground-Fault Circuit Interrupter: thiết bị ngắt mạch khi phát hiện dòng điện rò bất thường để giảm nguy cơ điện giật.
+Lưu ý: Các mức điện áp, cấu hình dây và tiêu chuẩn ổ cắm ở Mỹ trong chương này không nên áp dụng nguyên xi cho hệ thống điện ở Hàn Quốc.
+15-15. Động cơ và máy phát điện
+
+
+
+
+
+
+
+
+
+Generator – Máy phát điện (발전기)
+Chuyển đổi năng lượng cơ học thành năng lượng điện.
+
+
+
+
+
+
+
+
+
+
+
+
+Motor – Động cơ điện (모터)
+Chuyển đổi năng lượng điện thành năng lượng cơ học, thường là chuyển động quay.
+
+
+
+Các bộ phận được nhắc đến trong tài liệu:
+Thuật ngữ	Dịch tiếng Việt	Chức năng cơ bản
+Armature	Phần ứng	Phần liên quan đến điện áp hoặc dòng điện được tạo ra hay cấp vào máy
+Field winding	Cuộn dây kích từ	Tạo từ trường
+Slip ring	Vành trượt	Duy trì kết nối điện với phần quay
+Brush	Chổi than	Truyền điện giữa phần đứng yên và phần quay
+Commutator	Cổ góp	Đổi kết nối điện theo vị trí quay để tạo tác dụng chỉnh lưu trong máy điện phù hợp
+AC induction motor	Động cơ cảm ứng AC	Động cơ xoay chiều hoạt động dựa trên cảm ứng điện từ
+Universal motor	Động cơ vạn năng	Có thể hoạt động với AC hoặc DC trong thiết kế phù hợp
+Alternator	Máy phát điện xoay chiều	Tạo ra điện áp xoay chiều
+Phân biệt nhanh:
+- Máy phát điện: cơ năng → điện năng.
+- Động cơ điện: điện năng → cơ năng.
+15-16. Nguồn điện xoay chiều ba pha
+Hệ thống AC ba pha gồm ba điện áp hình sin có cùng tần số và lệch pha nhau \(120^\circ\).
+Ưu điểm chính được nêu trong tài liệu: truyền tải điện hiệu quả.
+Có hai kiểu đấu dây chính:
+
+
+
+
+
+
+
+
+
+Y connection – Đấu hình sao (Y)
+Ba cuộn dây có một đầu nối chung. Trong ví dụ của tài liệu, nếu điện áp pha là \(120V\), điện áp dây là:
+\[
+V_L=\sqrt3V_{ph}
+\]
+
+\[
+V_L\approx1.73\times120=208V
+\]
+
+
+
+
+
+
+
+
+
+
+
+
+
+Delta connection – Đấu tam giác (Δ)
+Ba cuộn dây được nối thành vòng kín hình tam giác. Điện áp dây bằng điện áp pha của cuộn dây:
+\[
+V_L=V_{ph}
+\]
+
+Với ví dụ cuộn dây \(120V\), điện áp dây là \(120V\).
+
+
+
+Tài liệu cũng nêu rằng cấu hình tam giác có thể cung cấp khả năng tải dòng điện cao hơn trong điều kiện so sánh cụ thể. Không nên áp dụng hệ số \(1.73\) cho mọi đại lượng và mọi kiểu đấu nối mà không xác định rõ đại lượng dây hay pha.
+15-17. Tìm hiểu ổ cắm đôi 120 V (120-V Duplex Receptacle)
+Phần cuối tài liệu tập trung vào cấu tạo ổ cắm, cách đấu dây, đo điện áp và các thiết bị bảo vệ chống điện giật.
+A. Các bộ phận và dây điện của ổ cắm
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+5
+
+
+
+
+
+
+
+
+Tài liệu mô tả ổ cắm đôi tiêu chuẩn của Mỹ gồm hai vị trí cắm trên cùng một thiết bị.
+Thuật ngữ	Nghĩa tiếng Việt	Chức năng
+Hot wire	Dây nóng	Dây mang điện áp so với trung tính hoặc đất trong điều kiện vận hành bình thường
+Neutral wire	Dây trung tính	Đường dẫn dòng điện trở về nguồn trong hệ thống thông thường
+Ground wire	Dây tiếp địa	Đường bảo vệ khi có sự cố điện
+Brass screw	Vít màu đồng	Đầu nối dây nóng
+Silver screw	Vít màu bạc	Đầu nối dây trung tính
+Green screw	Vít màu xanh lá	Đầu nối dây tiếp địa
+Receptacle	Ổ cắm	Bộ phận nhận phích cắm
+Theo tài liệu, cách đấu nối của ổ cắm 120 V tiêu chuẩn là:
+- Dây nóng màu đen nối với vít màu đồng.
+- Dây trung tính màu trắng nối với vít màu bạc.
+- Dây tiếp địa bằng đồng trần hoặc màu xanh lá nối với vít xanh lá.
+Đây là cách đấu dây theo tiêu chuẩn được mô tả trong tài liệu Mỹ. Không tự đấu dây điện thực tế nếu chưa được đào tạo và chưa ngắt, xác nhận nguồn điện an toàn.
+B. Đo điện áp ổ cắm
+Tài liệu đưa ra các giá trị tham khảo đối với ổ cắm 120 V được đấu nối đúng:
+Vị trí đo	Điện áp theo tài liệu
+Hot – Neutral (dây nóng – trung tính)	120 VAC
+Hot – Ground (dây nóng – tiếp địa)	120 VAC
+Neutral – Ground (trung tính – tiếp địa)	0 VAC
+VAC có nghĩa là điện áp xoay chiều.
+Những giá trị trên là giá trị danh định theo sơ đồ trong tài liệu, không phải kết quả bắt buộc của mọi phép đo thực tế.
+C. Ổ cắm 15 A và 20 A
+- Ổ cắm 15 A thường được bảo vệ bằng cầu dao hoặc cầu chì 15 A và dùng dây đồng cỡ phù hợp với tiêu chuẩn của mạch.
+- Ổ cắm 20 A thường sử dụng dây đồng cỡ lớn hơn và được bảo vệ bằng cầu dao hoặc cầu chì 20 A.
+- Phích cắm 15 A có thể phù hợp với ổ cắm 20 A theo cấu hình tiêu chuẩn được mô tả.
+- Phích cắm 20 A không phù hợp với ổ cắm 15 A tiêu chuẩn.
+Mục đích của việc lựa chọn dây và thiết bị bảo vệ phù hợp là hạn chế tình trạng dây quá nóng và nguy cơ cháy điện.
+D. Ổ cắm chống trẻ em (Tamper-Resistant Receptacle – TR)
+Ổ cắm TR có cơ cấu màn chắn bên trong các khe cắm.
+- Khi cắm phích đúng cách, hai lưỡi phích tác động đồng thời lên cơ cấu màn chắn.
+- Nếu chỉ đưa một vật vào một khe, màn chắn được thiết kế để không mở.
+- Mục đích là giảm nguy cơ trẻ em chạm vào phần dẫn điện.
+E. GFCI – Thiết bị ngắt mạch khi có dòng rò
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+7
+
+
+
+
+
+
+
+
+
+GFCI là viết tắt của Ground-Fault Circuit Interrupter.
+Chức năng: phát hiện sự mất cân bằng dòng điện giữa dây nóng và dây trung tính, sau đó ngắt nguồn nhanh chóng để giảm nguy cơ điện giật khi có dòng điện rò.
+Theo tài liệu:
+- Dòng rò khoảng 5 mA trở lên là ngưỡng được dùng để mô tả hoạt động bảo vệ trong phần này.
+- Thời gian phản ứng được tài liệu nêu là khoảng \(25ms\), tức \(0.025s\).
+- GFCI được sử dụng tại các khu vực dễ tiếp xúc với nước hoặc độ ẩm như phòng tắm, khu vực ngoài trời và hồ bơi, theo các yêu cầu được tài liệu trình bày.
+Lưu ý: GFCI giúp giảm nguy cơ điện giật nhưng không làm cho việc chạm vào dây điện đang mang điện trở nên an toàn.
+F. Nút TEST và RESET
+Nút	Dịch nghĩa	Chức năng
+TEST	Kiểm tra	Tạo điều kiện thử nghiệm để kiểm tra khả năng ngắt của GFCI
+RESET	Đặt lại	Khôi phục trạng thái hoạt động sau khi thiết bị ngắt, nếu không còn lỗi
+Theo hướng dẫn trong tài liệu, cần kiểm tra GFCI ít nhất mỗi tháng một lần bằng nút TEST và đặt lại bằng nút RESET nếu thiết bị hoạt động đúng theo hướng dẫn của nhà sản xuất.
+Tài liệu còn đề cập đến đèn báo trạng thái:
+- Đèn xanh: trạng thái hoạt động bình thường theo loại thiết bị được mô tả.
+- Đèn đỏ hoặc nút RESET bật ra: thiết bị có thể cần kiểm tra hoặc đặt lại.
+- Không thể đặt lại hoặc đèn tiếp tục báo lỗi: có thể thiết bị bị hỏng hoặc nguồn cấp có vấn đề.
+Màu đèn và cách báo lỗi có thể khác nhau tùy mẫu GFCI.
+
+3. Bảng tổng hợp công thức cần học thuộc
+Đây là những công thức quan trọng nhất của chương, đặc biệt nếu m phải làm bài tính toán.
+Nội dung	Công thức
+Điện áp tức thời	\(v=V_M\sin\theta\)
+Giá trị hiệu dụng	\(V_{rms}=0.707V_M\)
+Giá trị đỉnh	\(V_M=1.414V_{rms}\)
+Giá trị trung bình nửa chu kỳ	\(V_{avg}=0.637V_M\)
+Giá trị đỉnh-đỉnh	\(V_{pp}=2V_M\)
+Tần số	\(f=1/T\)
+Chu kỳ	\(T=1/f\)
+Bước sóng	\(\lambda=v/f\)
+Đổi góc pha thành thời gian	\(t=(\theta/360^\circ)(1/f)\)
+Định luật Ohm	\(V=IR\)
+Công suất điện	\(P=VI\)
+Tổn thất trên điện trở	\(P_{\text{loss}}=I^2R\)
+Tần số hài	\(f_n=nf_1\)
+Điện áp dây đấu sao cân bằng	\(V_L=\sqrt3V_{ph}\)
+
+
+
+
